@@ -107,6 +107,7 @@ button:disabled {
   margin: 0 auto;
   font-size: 3rem;
   border-radius: 2rem;
+  margin-top: 2rem;
 }
 
 .sign-out {
@@ -158,9 +159,19 @@ p {
   color: black;
 }
 
-img {
-  width: 40px;
-  height: 40px;
+.profileImg {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin: 2px 5px;
+}
+
+.chatImg {
+  margin: 0 5rem;
+}
+
+.loginText {
+  margin-top: 3rem;
+  color: #fff;
+  font-size: 2rem;
 }

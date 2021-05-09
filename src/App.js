@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./App.css";
+import ChatLogo from "./undraw_Chatting.svg";
 import firebase from "firebase/app";
 import "./firebase";
 
@@ -36,6 +37,8 @@ function SignIn() {
 
   return (
     <>
+      <img src={ChatLogo} alt="chatImg" className="chatImg"></img>
+      <div className="loginText">Sign In With Google</div>
       <button className="sign-in" onClick={signInWithGoogle}>
         <FcGoogle className="mt" />
       </button>
@@ -89,7 +92,7 @@ function ChatRoom() {
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
-          placeholder="Type a message"
+          placeholder="Type a message..."
         />
         <button type="submit" disabled={!formValue}>
           <FiSend className="mt" />
@@ -112,6 +115,7 @@ function ChatMessage(props) {
             photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png"
           }
           alt=""
+          className="profileImg"
         />
         <p>{text}</p>
       </div>
